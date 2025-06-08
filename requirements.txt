@@ -4,7 +4,6 @@ langchain-core
 
 # OpenAI Integration
 langchain-openai
-langchain-openai
 openai
 
 # Anthropic Integration
@@ -25,5 +24,4 @@ python-dotenv
 # Machine Learning Utilities
 numpy
 scikit-learn
-
 

@@ -1,16 +1,14 @@
-from langchain_huggingface import HuggingFaceEndpoint, ChatHuggingFace
+from langchain_huggingface import HuggingFaceEndpoint,ChatHuggingFace
 from dotenv import load_dotenv
 import os
-
 load_dotenv()
-
+print(os.getenv("HUGGINGFACEHUB_API_KEY"))
 llm = HuggingFaceEndpoint(
-    model="TinyLlama/TinyLlama-1.1B-Chat-v1.0",
-    task="text-generation"
-)
-model= ChatHuggingFace(
-    llm=llm
+    repo_id="google/gemma-2-2b-it",
+    task="text-generation",
+    # huggingfacehub_api_token=os.getenv("HUGGINGFACEHUB_API_KEY")
 )
 
-res = model.invoke("What is the capital of France?")
-print(res.content)
+chat = ChatHuggingFace(llm=llm)
+
+print(chat.invoke("What is the capital of France?"))

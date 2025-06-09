@@ -17,5 +17,5 @@ class structure_provider(TypedDict):
 sturcture_model=model.with_structured_output(structure_provider)
 
 
-res=sturcture_model.invoke("the hardware is not working,please help me to fix it")
+res=sturcture_model.invoke("wi")
 print(res.content)

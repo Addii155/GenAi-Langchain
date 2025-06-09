@@ -25,3 +25,6 @@ python-dotenv
 numpy
 scikit-learn
 
+# Data loader
+langchain-community
+

@@ -7,12 +7,12 @@ template=PromptTemplate(
     template="You are helping a user with their query: {query}.please provide a detailed response",
     input_variables=["query"]
 )
-prompt= template.format(query="Kubernetes working?")
+prompt= template.format(query="Joke on Os")
 
 model= ChatGoogleGenerativeAI(
         model="gemini-1.5-flash",
     temperature=0.2,
 )
-print(prompt)
+# print(prompt)
 res= model.invoke(prompt)
 print(res.content)
